@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: db_urlshort
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: url_shorter
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  url_shortener:
+    build: .
+    container_name: service_url_short
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgres://user:password@postgres:5432/url_shortener?sslmode=disable"
+    ports:
+      - "8080:8080"
+    command: ["./url_shortener", "-stgType", "postgres"] #Для указания типа хранилища memory/postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_urlshort
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./pgadmin_servers.json:/pgadmin4/servers.json
+
+volumes:
+  pg_data:
+  pgadmin_data:

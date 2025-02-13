@@ -1,0 +1,1 @@
+postgresUrl: "postgres://user:password@postgres:5432/url_shortener?sslmode=disable"
