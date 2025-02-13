@@ -23,3 +23,6 @@ go run main.go -stgType=memory
 go run main.go -stgType=postgres
 ```
 also enter the connection data in the config file.
+
+## Docker
+use docker-compose up --build
