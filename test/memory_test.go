@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"url_shorter/inter/storage/memory"
+	"url_shorter/internal/storage/memory"
 )
 
 func TestMemStorage(t *testing.T) {

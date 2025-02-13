@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"sync"
-	"url_shorter/inter/shorter"
+	"url_shorter/internal/shorter"
 )
 
 type MemStorage struct {

@@ -3,7 +3,7 @@ package test
 import (
 	"math/rand"
 	"testing"
-	"url_shorter/inter/shorter"
+	"url_shorter/internal/shorter"
 )
 
 func generateRandomURL() string {

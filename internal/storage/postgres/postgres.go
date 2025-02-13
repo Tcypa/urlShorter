@@ -8,7 +8,7 @@ import (
 	"log"
 	"sync"
 	"url_shorter/config"
-	"url_shorter/inter/shorter"
+	"url_shorter/internal/shorter"
 )
 
 type PgStorage struct {

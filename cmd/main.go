@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 	cfg "url_shorter/config"
-	api "url_shorter/inter/handler"
-	stg "url_shorter/inter/storage"
+	api "url_shorter/internal/handler"
+	stg "url_shorter/internal/storage"
 )
 
 func main() {

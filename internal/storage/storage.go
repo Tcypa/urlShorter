@@ -3,8 +3,8 @@ package storage
 import (
 	"context"
 	"log"
-	"url_shorter/inter/storage/memory"
-	"url_shorter/inter/storage/postgres"
+	"url_shorter/internal/storage/memory"
+	"url_shorter/internal/storage/postgres"
 )
 
 type Storage interface {

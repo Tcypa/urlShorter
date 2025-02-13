@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"url_shorter/inter/storage"
+	"url_shorter/internal/storage"
 )
 
 type URLMapping struct {

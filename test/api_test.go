@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	"url_shorter/inter/handler"
-	"url_shorter/inter/storage"
-	_ "url_shorter/inter/storage/memory"
+	"url_shorter/internal/handler"
+	"url_shorter/internal/storage"
+	_ "url_shorter/internal/storage/memory"
 )
 
 var str = `memory`
