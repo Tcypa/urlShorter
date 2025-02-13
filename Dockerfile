@@ -1,4 +1,3 @@
-# --- Сборка Go-приложения ---
 FROM golang:1.23rc1 AS builder
 
 WORKDIR /app
