@@ -23,7 +23,7 @@ services:
       DATABASE_URL: "postgres://user:password@postgres:5432/url_shortener?sslmode=disable"
     ports:
       - "8080:8080"
-    command: ["./url_shortener", "-stgType", "postgres"] #Для указания типа хранилища memory/postgres
+    command: ["./url_shortener", "-stgType", "postgres"] #memory/postgres
 
   pgadmin:
     image: dpage/pgadmin4
